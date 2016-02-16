@@ -23,7 +23,7 @@ class MainActivity : ActionBarActivity(), NavigationDrawerFragment.NavigationDra
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
-    private var mNavigationDrawerFragment: NavigationDrawerFragment? = null
+    private var navigationDrawerFragment: NavigationDrawerFragment? = null
 
     /**
      * Used to store the last screen title. For use in [.restoreActionBar].
@@ -34,11 +34,11 @@ class MainActivity : ActionBarActivity(), NavigationDrawerFragment.NavigationDra
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mNavigationDrawerFragment = supportFragmentManager.findFragmentById(R.id.navigation_drawer) as NavigationDrawerFragment
+        navigationDrawerFragment = supportFragmentManager.findFragmentById(R.id.navigation_drawer) as NavigationDrawerFragment
         mTitle = title
 
         // Set up the drawer.
-        mNavigationDrawerFragment!!.setUp(
+        navigationDrawerFragment!!.setUp(
                 R.id.navigation_drawer,
                 findViewById(R.id.drawer_layout) as DrawerLayout)
     }
